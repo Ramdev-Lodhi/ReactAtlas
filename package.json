@@ -1,5 +1,5 @@
 {
-  "name": "atlashub",
+  "name": "reactatlas",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,12 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "atlashub": "file:",
     "axios": "^1.7.9",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
-    "react-router-dom": "^7.1.1"
+    "react-router-dom": "^7.1.1",
+    "reactatlas": "file:"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
