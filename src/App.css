@@ -595,6 +595,12 @@ country Card
 
 /* Media Query for extra-small screens */
 @media (max-width: 480px) {
+  .hero-section .container {
+    margin: 0;
+  }
+  .container .banner-image {
+    width: 100%;
+  }
   .section-searchFilter {
     gap: 0.5rem;
   }
