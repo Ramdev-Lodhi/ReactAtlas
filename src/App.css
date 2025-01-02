@@ -433,7 +433,7 @@ country Card
   & .infoContainer {
     display: flex;
     flex-direction: column;
-    gap: 2.4rem;
+    gap: 0.5rem;
   }
 
   & .country-card-backBtn {
@@ -529,7 +529,7 @@ country Card
     border: 0.05rem solid #fff;
     background: linear-gradient(71deg, #080509, #1a171c, #080509);
     width: 100%;
-    max-width: 350px;
+    /* max-width: 350px; */
   }
 
   & .select-section {
@@ -569,7 +569,7 @@ country Card
     align-items: stretch;
   }
   & .select-sort {
-    margin-top: 1rem;
+    margin-top: 1.6rem;
   }
 }
 
@@ -603,6 +603,10 @@ country Card
   & .select-section {
     font-size: 1.2rem;
     padding: 0.5rem 1.2rem;
+  }
+  input {
+    max-width: 340px;
+    margin: 0px 10px 0px 10px;
   }
 }
 
@@ -661,11 +665,20 @@ contact us Page ends here
   .grid-four-cols {
     grid-template-columns: repeat(3, 1fr);
   }
+  .country-card {
+    padding: 0px 20px;
+  }
+  .container {
+    max-width: 90rem;
+  }
 }
 
 @media screen and (max-width: 980px) {
   .grid-four-cols {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .container {
+    max-width: 60rem;
   }
 }
 
