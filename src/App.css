@@ -146,6 +146,7 @@ nav ul {
 
   .menu-mobile {
     position: absolute;
+    z-index: 2;
     top: 10rem;
     left: 0;
     background-color: #0d1212;
@@ -390,6 +391,7 @@ country Card
 
 .country-card {
   margin-top: 3.2rem;
+  z-index: 1;
 }
 .country-section {
   margin: 6.4rem auto 9.6rem auto;
@@ -408,7 +410,7 @@ country Card
 
 /* indivisual card container  */
 .country-details-card {
-  max-width: 100%;
+  max-width: 80%;
   margin: 6.4rem auto;
   box-shadow: rgba(168, 163, 184, 0.15) 0px 48px 100px 0px;
 
@@ -441,7 +443,7 @@ country Card
   }
 }
 
-.section-searchFilter {
+/* .section-searchFilter {
   width: 100%;
   display: flex;
   align-items: center;
@@ -457,8 +459,14 @@ country Card
     font-family: "urbanist";
     font-size: 1.55rem;
     font-weight: bold;
+    padding: 0.6rem 2.4rem;
     letter-spacing: 0.1rem;
     text-transform: capitalize;
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
     color: rgba(255, 255, 255, 0.8);
     border: 0.05rem solid #fff;
     background: linear-gradient(71deg, #080509, #1a171c, #080509);
@@ -493,6 +501,108 @@ country Card
     padding: 0.6rem 2.4rem;
     border-radius: 5rem;
     margin-top: 1rem;
+  }
+} */
+.section-searchFilter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3.2rem;
+
+  & .container-card {
+    padding: 0.8rem 2.4rem;
+    background: linear-gradient(71deg, #080509, #1a171c, #080509);
+  }
+
+  & input {
+    font-family: "urbanist";
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 0.6rem 2.4rem;
+    letter-spacing: 0.1rem;
+    text-transform: capitalize;
+    border-radius: 5rem;
+    color: rgba(255, 255, 255, 0.8);
+    border: 0.05rem solid #fff;
+    background: linear-gradient(71deg, #080509, #1a171c, #080509);
+    width: 100%;
+    max-width: 350px;
+  }
+
+  & .select-section {
+    background: linear-gradient(71deg, #080509, #1a171c, #080509);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.6rem 2.4rem;
+    border-radius: 5rem;
+    font-family: "urbanist";
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-transform: capitalize;
+    width: 100%;
+    max-width: 200px;
+
+    & option {
+      background: linear-gradient(71deg, #080509, #1a171c, #080509);
+      color: rgba(255, 255, 255, 0.8);
+      padding: 0.6rem 2.4rem;
+      border-radius: 5rem;
+    }
+  }
+  & .select-section > option {
+    background-color: #080509;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.6rem 2.4rem;
+    border-radius: 5rem;
+    margin-top: 1rem;
+  }
+
+  & .sort-btn {
+    width: 100%;
+    padding: 0px 12px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  & .select-sort {
+    margin-top: 1rem;
+  }
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .section-searchFilter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .sort-btn {
+    width: 10rem;
+  }
+  & input,
+  & .select-section {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  & button:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Media Query for extra-small screens */
+@media (max-width: 480px) {
+  .section-searchFilter {
+    gap: 0.5rem;
+  }
+
+  & input,
+  & .select-section {
+    font-size: 1.2rem;
+    padding: 0.5rem 1.2rem;
   }
 }
 
@@ -574,6 +684,40 @@ contact us Page ends here
 /* //Loader  */
 /* HTML: <div class="loader"></div> */
 .loader {
+  width: 55px;
+  aspect-ratio: 1;
+  --g1: conic-gradient(from 90deg at top 3px left 3px, #0000 90deg, #fff 0);
+  --g2: conic-gradient(
+    from -90deg at bottom 3px right 3px,
+    #0000 90deg,
+    #fff 0
+  );
+  background: var(--g1), var(--g1), var(--g1), var(--g1), var(--g2), var(--g2),
+    var(--g2), var(--g2);
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  animation: l11 1.5s infinite;
+}
+@keyframes l11 {
+  0% {
+    background-size: 35px 15px, 15px 15px, 15px 35px, 35px 35px;
+  }
+  25% {
+    background-size: 35px 35px, 15px 35px, 15px 15px, 35px 15px;
+  }
+  50% {
+    background-size: 15px 35px, 35px 35px, 35px 15px, 15px 15px;
+  }
+  75% {
+    background-size: 15px 15px, 35px 15px, 35px 35px, 15px 35px;
+  }
+  100% {
+    background-size: 35px 15px, 15px 15px, 15px 35px, 35px 35px;
+  }
+}
+
+/* .loader {
   width: 50px;
   padding: 8px;
   aspect-ratio: 1;
@@ -590,7 +734,7 @@ contact us Page ends here
   to {
     transform: rotate(1turn);
   }
-}
+} */
 
 .loader-section {
   height: 50vh;
