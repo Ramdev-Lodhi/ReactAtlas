@@ -608,6 +608,15 @@ country Card
     max-width: 340px;
     margin: 0px 10px 0px 10px;
   }
+  .copyright-text p {
+    text-align: center;
+  }
+  .footer-menu ul li {
+    margin: 0;
+  }
+  .footer-menu ul {
+    justify-content: space-evenly;
+  }
 }
 
 ::placeholder {
@@ -687,6 +696,13 @@ contact us Page ends here
   .grid-three-cols,
   .grid-two-cols {
     grid-template-columns: 1fr;
+  }
+  .copyright-text:nth-child(1) {
+    order: 2;
+  }
+
+  .footer-menu:nth-child(2) {
+    order: 1;
   }
 
   .grid--cols {
