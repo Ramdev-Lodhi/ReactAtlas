@@ -7,6 +7,7 @@ export const ErrorPage = () => {
 
   return (
     <section style={styles.section}>
+      <div className="star"></div>
       <div className="bg-white-box" style={styles.imageContainer}>
         <h1 style={styles.text}>Oops! An error occurred.</h1>
         {error && <p style={styles.errorMessage}>{error.data}</p>}

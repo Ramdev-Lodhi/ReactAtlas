@@ -2,6 +2,7 @@ import CountryData from "../api/countryData.json";
 export const About = () => {
   return (
     <section className="section-about container">
+      <div className="star"></div>
       <h2 className="container-title">
         Here are the Interesting Facts
         <br />

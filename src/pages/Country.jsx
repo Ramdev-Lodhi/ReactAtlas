@@ -40,6 +40,7 @@ export const Country = () => {
 
   return (
     <section className="country-section">
+      <div className="star"></div>
       <SearchFilter
         search={search}
         setSearch={setSearch}

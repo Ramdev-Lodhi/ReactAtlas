@@ -7,6 +7,7 @@ export const Contact = () => {
 
   return (
     <section className="section-contact ">
+      <div className="star"></div>
       <div className="container container-card bg-yellow-box">
         <h2 className="container-title">Contact Us</h2>
         <div className="contact-wrapper">
@@ -38,7 +39,7 @@ export const Contact = () => {
               autoComplete="off"
             ></textarea>
 
-            <button type="submit" value="send">
+            <button type="submit" value="send" className="btn-contact-form">
               Send
             </button>
           </form>
