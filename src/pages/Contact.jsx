@@ -32,7 +32,7 @@ export const Contact = () => {
 
             <textarea
               className="form-control"
-              rows="10"
+              rows="4"
               placeholder="Enter your message"
               name="message"
               required

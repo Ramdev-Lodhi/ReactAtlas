@@ -32,15 +32,13 @@ export const SearchFilter = ({
           type="text"
           placeholder="search"
           value={search}
+          className="form-control "
           onChange={handleInputChange}
         />
       </div>
 
       <div className="sort-btn">
         <button onClick={() => sortCountries("asc")}>Asc</button>
-        {/* </div>
-
-      <div> */}
         <button onClick={() => sortCountries("des")}>Desc</button>
         <div className="select-sort">
           <select
